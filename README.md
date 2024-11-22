@@ -47,7 +47,7 @@ python3 train.py --data /data/wallhack1.8k --bs 128 --ws 351 --scenario LOS --an
 In this configuration, the samples will have a shape of [128,1,52,401] = [batch size, channels, subcarriers, window size].
 
 ### Cross-Domain Generalization
-The `--scenario` and `--antenna` aruguments allow the selection of scenario (LOS or NLOS) and antenna type (BQ or PIFA).
+The `--scenario` and `--antenna` arguments allow the selection of scenario (LOS or NLOS) and antenna type (BQ or PIFA).
 
 If you want to use a different scenario/antenna type for testing cross-domain generalization, uncomment the following lines in `train.py` and set the `SCENARIO` and `ANTENNA` variables accordingly:
 
