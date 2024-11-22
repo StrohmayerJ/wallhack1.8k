@@ -36,7 +36,7 @@ pip install -r requirements.txt
 ```
 
 ### Datasets
-Get the Wallhack1.8k dataset from https://zenodo.org/records/13950918 and put it in the `\data` directory.
+Get the Wallhack1.8k dataset from https://zenodo.org/records/13950918 and put it in the `/data` directory.
 
 ### Training & Testing 
 Example command for training and testing a dummy ResNet18 model on CSI amplitude features with a window size of 401 WiFi packets (~4 seconds), collected in the Line-of-Sight (LOS) scenario with the Biquad antenna system (BQ):
