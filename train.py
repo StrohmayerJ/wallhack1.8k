@@ -76,7 +76,7 @@ def train(opt):
             feature_window = feature_window.float()
             prediction = model(feature_window) # TODO: add your model for training here
 
-        # calidation loop
+        # validation loop
         with torch.no_grad():
             for batch in tqdm(dataloaderVal):
                 feature_window, c = [x.to(device) for x in batch]
