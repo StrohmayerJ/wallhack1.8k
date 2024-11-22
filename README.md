@@ -1,8 +1,9 @@
 # PyTorch Dataloader for the Wallhack1.8k Dataset
 
 ### Papers
-Strohmayer, J., and Kampel, M. (2024). “Data Augmentation Techniques for Cross-Domain WiFi CSI-Based Human Activity Recognition”, In IFIP International Conference on Artificial Intelligence Applications and Innovations (pp. 42-56). Cham: Springer Nature Switzerland, doi: https://doi.org/10.1007/978-3-031-63211-2_4
-Strohmayer J. and Kampel M., “Directional Antenna Systems for Long-Range Through-Wall Human Activity Recognition,” 2024 IEEE International Conference on Image Processing (ICIP), Abu Dhabi, United Arab Emirates, 2024, pp. 3594-3599, doi: https://doi.org/10.1109/ICIP51287.2024.10647666.
+**Strohmayer, J., and Kampel, M.** (2024). “Data Augmentation Techniques for Cross-Domain WiFi CSI-Based Human Activity Recognition”, In IFIP International Conference on Artificial Intelligence Applications and Innovations (pp. 42-56). Cham: Springer Nature Switzerland, doi: https://doi.org/10.1007/978-3-031-63211-2_4
+
+**Strohmayer J. and Kampel M.**, “Directional Antenna Systems for Long-Range Through-Wall Human Activity Recognition,” 2024 IEEE International Conference on Image Processing (ICIP), Abu Dhabi, United Arab Emirates, 2024, pp. 3594-3599, doi: https://doi.org/10.1109/ICIP51287.2024.10647666.
 
 BibTeX:
 ```
@@ -41,7 +42,7 @@ Get the Wallhack1.8k dataset from `https://zenodo.org/records/13950918` and put 
 Example command for training & testing a dummy ResNet18 model on CSI amplitude features with a window size of 401 WiFi packets (~4 seconds), collected in the Line-of-Sight (LOS) scenario with the Biquad antenna system (BQ):
 
 ```
-python3 train.py --data /data/3DO --bs 128 --ws 351 --scenario LOS --anetnna BQ
+python3 train.py --data /data/wallhack1.8k --bs 128 --ws 351 --scenario LOS --anetnna BQ
 ```
 In this configuration, the samples will have a shape of [128,1,52,401] = [batch size, channels, subcarriers, window size].
 
@@ -71,7 +72,7 @@ ANTENNA = 'BQ' # ['BQ', 'PIFA']
 , and run:
 
 ```
-python3 train.py --data /data/3DO --bs 128 --ws 351 --scenario LOS --anetnna BQ
+python3 train.py --data /data/wallhack1.8k --bs 128 --ws 351 --scenario LOS --anetnna BQ
 ```
 
 
