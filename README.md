@@ -39,17 +39,17 @@ pip install -r requirements.txt
 Get the Wallhack1.8k dataset from https://zenodo.org/records/13950918 and put it in the `\data` directory.
 
 ### Training & Testing 
-Example command for training & testing a dummy ResNet18 model on CSI amplitude features with a window size of 401 WiFi packets (~4 seconds), collected in the Line-of-Sight (LOS) scenario with the Biquad antenna system (BQ):
+Example command for training and testing a dummy ResNet18 model on CSI amplitude features with a window size of 401 WiFi packets (~4 seconds), collected in the Line-of-Sight (LOS) scenario with the Biquad antenna system (BQ):
 
 ```
 python3 train.py --data /data/wallhack1.8k --bs 128 --ws 351 --scenario LOS --anetnna BQ
 ```
-In this configuration, the samples will have a shape of [128,1,52,401] = [batch size, channels, subcarriers, window size].
+In this configuration, the samples will have a shape of [128, 1, 52, 401] = [batch size, channels, subcarriers, window size].
 
 ### Cross-Domain Generalization
-The `--scenario` and `--antenna` arguments allow the selection of scenario (LOS or NLOS) and antenna type (BQ or PIFA).
+The `--scenario` and `--antenna` arguments allow the selection of the scenario (LOS or NLOS) and the antenna type (BQ or PIFA).
 
-If you want to use a different scenario/antenna type for testing cross-domain generalization, uncomment the following lines in `train.py` and set the `SCENARIO` and `ANTENNA` variables accordingly:
+If you want to use a different scenario or antenna type for testing cross-domain generalization, uncomment the following lines in `train.py` and set the `SCENARIO` and `ANTENNA` variables accordingly:
 
 ```
 # dataloader for cross-domain testing
@@ -62,14 +62,14 @@ datasetTest = torch.utils.data.ConcatDataset(testSubsets)
 dataloaderTest = torch.utils.data.DataLoader(datasetTest,batch_size=opt.bs,num_workers=opt.workers,shuffle=False)
 ```
 
-For example, for testing generalization between LOS and NLOS scenarios on data collected with the BQ system, set:
+For example, to test generalization between LOS and NLOS scenarios on data collected with the BQ system, set:
 
 ```
 SCENARIO = 'NLOS' # ['LOS', 'NLOS']
 ANTENNA = 'BQ' # ['BQ', 'PIFA']
 ```
 
-, and run:
+Then run:
 
 ```
 python3 train.py --data /data/wallhack1.8k --bs 128 --ws 351 --scenario LOS --anetnna BQ
