@@ -35,7 +35,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### Datasets
+### Dataset
 Get the Wallhack1.8k dataset from https://zenodo.org/records/13950918 and put it in the `/data` directory.
 
 ### Training & Testing 
