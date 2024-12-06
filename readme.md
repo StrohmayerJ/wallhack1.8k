@@ -6,7 +6,7 @@
 **Strohmayer J. and Kampel M.**, “Directional Antenna Systems for Long-Range Through-Wall Human Activity Recognition,” 2024 IEEE International Conference on Image Processing (ICIP), Abu Dhabi, United Arab Emirates, 2024, pp. 3594-3599, doi: https://doi.org/10.1109/ICIP51287.2024.10647666.
 
 BibTeX:
-```
+```BibTeX
 @inproceedings{strohmayer2024data,
   title={Data augmentation techniques for cross-domain wifi csi-based human activity recognition},
   author={Strohmayer, Julian and Kampel, Martin},
@@ -16,7 +16,7 @@ BibTeX:
   organization={Springer}
 }
 
-@INPROCEEDINGS{10647666,
+@INPROCEEDINGS{Strohmayer10647666,
   author={Strohmayer, Julian and Kampel, Martin},
   booktitle={2024 IEEE International Conference on Image Processing (ICIP)}, 
   title={Directional Antenna Systems for Long-Range Through-Wall Human Activity Recognition}, 
