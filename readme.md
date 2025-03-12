@@ -42,7 +42,7 @@ Get the Wallhack1.8k dataset from https://zenodo.org/records/13950918 and put it
 Example command for training and testing a dummy ResNet18 model on CSI amplitude features with a window size of 401 WiFi packets (~4 seconds), collected in the Line-of-Sight (LOS) scenario with the Biquad antenna system (BQ):
 
 ```
-python3 train.py --data /data/wallhack1.8k --bs 128 --ws 351 --scenario LOS --anetnna BQ
+python3 train.py --data data/wallhack1.8k --bs 128 --ws 351 --scenario LOS --antenna BQ
 ```
 In this configuration, the samples will have a shape of [128, 1, 52, 401] = [batch size, channels, subcarriers, window size].
 
@@ -72,7 +72,7 @@ ANTENNA = 'BQ' # ['BQ', 'PIFA']
 Then run:
 
 ```
-python3 train.py --data /data/wallhack1.8k --bs 128 --ws 351 --scenario LOS --anetnna BQ
+python3 train.py --data data/wallhack1.8k --bs 128 --ws 351 --scenario LOS --antenna BQ
 ```
 
 
