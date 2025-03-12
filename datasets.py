@@ -36,9 +36,6 @@ class WallhackDataset(Dataset):
         # read data from .csv file
         data = pd.read_csv(dataPath)
         csi = data['data']
-        self.x = data['x']
-        self.y = data['y']
-        self.z = data['z']
         self.c = data['class']
 
         # pre-compute or load complex CSI cache to speed up training
