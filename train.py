@@ -71,12 +71,14 @@ def train(opt):
     for epoch in tqdm(range(opt.epochs), desc='Epochs', unit='epoch'):
         
         # training loop
+        model.train()
         for batch in tqdm(dataloaderTrain, desc=f'Epoch {epoch + 1}/{opt.epochs}', unit='batch', leave=False):
             feature_window, c = [x.to(device) for x in batch]
             feature_window = feature_window.float()
             prediction = model(feature_window) # TODO: add your model for training here
 
         # validation loop
+        model.eval()
         with torch.no_grad():
             for batch in tqdm(dataloaderVal):
                 feature_window, c = [x.to(device) for x in batch]
@@ -85,6 +87,7 @@ def train(opt):
 
     # test loop
     print("Testing...")
+    model.eval()
     with torch.no_grad():
         for batch in tqdm(dataloaderTest):
             feature_window, c = [x.to(device) for x in batch]
